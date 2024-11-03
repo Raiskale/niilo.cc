@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+   
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    font-weight: 600;
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--text)
+}
+
+
+html {
+    font-size: 72.5%;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+
+    
+}
+
+
+:root {
+    --bg: #000;
+    --text: #fff;
+    --accent: #8400fff8;
+    --accent2: #8400ff86;
+}
+
+.text {
+    
+    width: 100%;
+    max-width: 75rem;
+    font-size: 2rem;
+    margin-left: 2vw;
+    position: relative;
+    transform: translateY(17.5vh);
+    height: 45vh;
+    z-index: 1;
+}
+
+.text h1 {
+    font-size: 8.5rem;
+
+}
+
+.text h2 {
+    font-size: 7rem;
+    margin-top: 1vh;
+    margin: 1vw;
+    text-align: left;
+    display: block;
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    
+}
+
+.text h2 span {
+    color: var(--text);
+}
+
+.text h3 {
+    font-size: 1.5rem;
+    margin-left: 1vw;
+}
+
+.social-media a{
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--accent2);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--accent2);
+    font-size: 1.75rem;
+    color: var(--main-color);
+    margin: 1vw 0vw 1vw 1vw;
+    
+}
+
+.social-media .contact {
+    border-radius: 10px;
+    width: 10rem;
+    height: 3.5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+
+.social-media a:hover {
+   background: var(--accent2);
+   transition: .5s;
+}
+
+move {
+    background-image: url(/Images/purple\ sky\,\ mountain\,\ waterfall.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20vw;
+    margin-top: 7.5vw;
+    max-width: 75rem;
+    width: 20rem;
+    padding: 25rem 35rem;
+    border-radius: 1rem;
+    transform-style: preserve-3d;
+    transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+  }
+  
+
+  
+  move::before,
+  move::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+  }
+  
+ 
+  move::before {
+    inset: 0.75rem;
+    border-radius: inherit;
+    background: black;
+    z-index: -1;
+    transform: translateZ(-50px);
+    filter: blur(25px);
+    opacity: 0.9;
+  }
+  
+  
+  move::after {
+    z-index: -2;
+    inset: -1rem;
+    filter: blur(40px);
+    background: var(--accent2);
+    transform: translateZ(-50px);
+  }
+  
+
+  
+  .property + .punctuation {
+    color: var(--property);
+  }
+  
+  .move-container {
+    position: relative;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
+  
+  /* extras for CSS only */
+  
+  .css-only move {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    transition: transform 200ms ease-in-out;
+  }
+  
+  .move-container.css-only > div {
+    z-index: 10;
+    position: absolute;
+    outline: 1px solid lime;
+  }
+  
+  .move-container.css-only > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  
+  .move-container.css-only > div:nth-child(9) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  .move-container.css-only > div:nth-child(1):hover ~ pre {
+    --rotateX: -10deg;
+    --rotateY: 10deg;
+  }
+  
+  .move-container.css-only > div:nth-child(2):hover ~ pre {
+    --rotateX: 0deg;
+    --rotateY: 5deg;
+  }
+  
+  .move-container.css-only > div:nth-child(3):hover ~ pre {
+    --rotateX: 5deg;
+    --rotateY: 5deg;
+  }
+  
+  .move-container.css-only > div:nth-child(4):hover ~ pre {
+    --rotateX: -5deg;
+    --rotateY: 0deg;
+  }
+  
+  .move-container.css-only > div:nth-child(5):hover ~ pre {
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+  }
+  
+  .move-container.css-only > div:nth-child(6):hover ~ pre {
+    --rotateX: 5deg;
+    --rotateY: 0deg;
+  }
+  
+  .move-container.css-only > div:nth-child(7):hover ~ pre {
+    --rotateX: -5deg;
+    --rotateY: -5deg;
+  }
+  
+  .move-container.css-only > div:nth-child(8):hover ~ pre {
+    --rotateX: 0deg;
+    --rotateY: -5deg;
+  }
+  
+  .move-container.css-only > div:nth-child(9):hover ~ pre {
+    --rotateX: 5deg;
+    --rotateY: -5deg;
+  }
+  
+  
+
+
+@keyframes shine {
+    0% {
+      background-position: 200%; /* Start off-screen to the left */
+    }
+    100% {
+      background-position: -200%; /* End off-screen to the right */
+    }
+  }
+
+@media (max-width: 768px) {
+    html { 
+        font-size: 30.5%;
+    }
+
+    .text {
+        margin-left: 5vw;
+    }
+    .text h3 {
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+  move {
+    margin-top: 25rem;
+    margin-right: 5rem;
+    
+  }
+
+}
