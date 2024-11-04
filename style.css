@@ -29,7 +29,7 @@ html::-webkit-scrollbar{
 
 section {
     min-height: 100vh;
-
+    overflow-x: hidden;
     
 }
 
