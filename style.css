@@ -60,16 +60,17 @@ section {
     transform: translateY(17.5vh);
     height: 45vh;
     z-index: 1;
+    margin-top: 10vh;
 }
 
 .text h1 {
-    font-size: 8.5rem;
+    font-size: 7.5rem;
 
 }
 
 .text h2 {
-    font-size: 7rem;
-    margin-top: 1vh;
+    font-size: 5rem;
+    margin-top: .5vh;
     margin: 1vw;
     text-align: left;
     display: block;
