@@ -58,19 +58,27 @@ section {
     font-size: 2rem;
     margin-left: 2vw;
     position: relative;
-    transform: translateY(17.5vh);
+    transform: translateY(22.5vh);
     height: 45vh;
     z-index: 1;
     margin-top: 10vh;
 }
 
 .text h1 {
-    font-size: 7.5rem;
+    font-size: 8.5rem;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+}
 
+.text h1 img {
+    width: 15%;
+    margin-left: 10px; /* Add some space between text and image */
+    vertical-align: middle; /* Ensure the image aligns with the middle of the text */
 }
 
 .text h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-top: .5vh;
     margin: 1vw;
     text-align: left;
@@ -89,7 +97,7 @@ section {
 }
 
 .text h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-left: 1vw;
 }
 
@@ -98,8 +106,8 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     background: transparent;
     border: .2rem solid var(--accent2);
     border-radius: 50%;
@@ -112,8 +120,8 @@ section {
 
 .social-media .contact {
     border-radius: 10px;
-    width: 10rem;
-    height: 3.5rem;
+    width: 11rem;
+    height: 4.5rem;
     margin-top: 2rem;
     margin-right: 2rem;
     color: #fff;
@@ -150,12 +158,22 @@ section {
 .keski {
     text-align: center;
     justify-content: center;
+
 }
 
 .keski h2 {
     margin-top: 15vh;
     font-size: 8rem;
     color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski h2 img {
+    width: 5%;
+    margin-left: 10px; 
+    vertical-align: middle; 
 }
 
 .keski h2 span {
@@ -165,11 +183,12 @@ section {
     background-clip: text; 
     -webkit-background-clip: text; 
     animation: shine 7s infinite; 
+    margin-left: 2rem;
 }
 
   
   
-
+/* Keyframeja */
 
 @keyframes shine {
     0% {
@@ -180,9 +199,37 @@ section {
     }
   }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: .5;
+
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* State when the element is in view */
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
 @media (max-width: 768px) {
     html { 
-        font-size: 50.5%;
+        font-size: 40.5%;
     }
 
 
@@ -201,6 +248,10 @@ section {
       width: 12rem;
       height: 5rem;
       font-size: 2rem;
+    }
+
+    .keski h2 img {
+        width: 10%;
     }
 }
 
