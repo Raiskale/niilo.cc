@@ -193,6 +193,9 @@ section {
     display: grid;
     place-items: center;
     margin-top: 5vh;
+
+
+    
 }
 
 .showcase-box {
@@ -203,10 +206,10 @@ section {
     overflow: hidden;
     width: 100%; 
     max-width: 50rem; 
-    border: 1px solid rgba(132, 0, 255, 0.502);
+    border: 2px solid rgba(132, 0, 255, 0.502);
     box-shadow: 2px 2px 20px rgb(132, 0, 255);
     
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .showcase-box img {
