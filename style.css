@@ -140,6 +140,8 @@ section {
     position: relative;
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
+    max-height: 100vh;
+    
 }
 
 .secondary::before {
@@ -186,7 +188,100 @@ section {
     margin-left: 2rem;
 }
 
-  
+
+.showcase {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+
+.showcase .container {
+    box-sizing: border-box;
+    border: 1px solid rgba(132, 0, 255, 0.502);
+    box-shadow: 2px 2px 20px rgb(132, 0, 255);
+    height: 60vh;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5vh;
+    max-width: 50rem;
+}
+    
+.container img {
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 20px rgb(132, 0, 255);
+}
+
+.container .tekstit {
+    background: rgba(97, 1, 153, 0.089);
+    background-image: url(/Images/pattern.svg);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+   
+    text-align: center;
+    
+}
+
+.container .tekstit h2 {
+    font-size: 3rem;
+    margin: 0; /* Ensures no interaction with the parent */
+    padding-top: 7.5vh;
+}
+
+
+.container .tekstit h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    flex-direction: column;
+}
+
+.container .tekstit p {
+    font-size: 1.5rem;
+}
+
+.container .tekstit h4 {
+    font-size: 1.55rem;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.container .tekstit h4 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite;
+
+ }
+
+.container .tekstit a {
+    margin-top: 15vh;
+    align-self: left;
+    font-size: 1.55rem;
+    border: var(--accent2) 1px solid;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    color: var(--text);
+    background: var(--accent2);
+    box-shadow: 0 0 10px 2px var(--accent2);
+    transition: .5s;
+}
+
+.container .tekstit a:hover {
+    color: var(--accent2);
+    background: transparent;
+}
+
   
 /* Keyframeja */
 
