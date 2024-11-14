@@ -37,10 +37,11 @@ section {
 :root {
     --bg: #000;
     --text: #fff;
+    --text2: #b08fcf;
     --accent: #8400fff8;
     --accent2: #8400ff86;
+    --accent3: #8400ff31;
 }
-
 
 .main {
   background: 
@@ -125,6 +126,49 @@ section {
    transition: .5s;
 }
 
+
+.secondary {
+    background-image: url(/Images/pattern.svg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure no visual overflow */
+}
+
+.secondary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #8400ff31, #000000, #000000);
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+
+
+
+
+
+.keski {
+    text-align: center;
+    justify-content: center;
+}
+
+.keski h2 {
+    margin-top: 15vh;
+    font-size: 8rem;
+    color: var(--text2);
+}
+
+.keski h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+}
 
   
   
