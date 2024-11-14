@@ -141,6 +141,8 @@ section {
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
+    min-height: 100vh; /* Ensures section spans full viewport height */
+    height: auto;      /* Allows flexibility */
     
 }
 
@@ -206,6 +208,7 @@ section {
     overflow: hidden;
     margin-top: 5vh;
     max-width: 50rem;
+    height: auto;
 }
     
 .container img {
