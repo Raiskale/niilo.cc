@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       observer.unobserve(entry.target);  // Stop observing after animation is triggered
     }
   });
-}, { threshold: 0.5 }); // Trigger when 50% of the element is in view
+}, { threshold: 1 }); // Trigger when 50% of the element is in view
 
 // Observe each element
 elementsToAnimate.forEach(element => {
