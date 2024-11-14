@@ -5,7 +5,6 @@
 * {
     padding: 0;
     margin: 0;
-   
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif; /* Use Inter font */
@@ -141,8 +140,7 @@ section {
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
-    min-height: 100vh; /* Ensures section spans full viewport height */
-    height: auto;      /* Allows flexibility */
+
     
 }
 
@@ -162,7 +160,7 @@ section {
 .keski {
     text-align: center;
     justify-content: center;
-
+    
 }
 
 .keski h2 {
@@ -191,53 +189,48 @@ section {
 }
 
 
-.showcase {
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: relative;
+.showcase-container {
+    display: grid;
+    place-items: center;
+    margin-top: 5vh;
 }
 
-
-.showcase .container {
-    box-sizing: border-box;
+.showcase-box {
+    display: flex;
+    flex-direction: column; 
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; 
+    max-width: 50rem; 
     border: 1px solid rgba(132, 0, 255, 0.502);
     box-shadow: 2px 2px 20px rgb(132, 0, 255);
-    height: 60vh;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 5vh;
-    max-width: 50rem;
-    height: auto;
-}
     
-.container img {
-    width: 100%;
-    height: auto;
+    border-radius: 10px;
+}
+
+.showcase-box img {
+    width: 100%; 
+    transition: 0.5s ease;
+    object-fit: cover; 
     box-shadow: 2px 2px 20px rgb(132, 0, 255);
 }
 
-.container .tekstit {
+.teksti {
+    height: 45rem;
+    text-align: center;
     background: rgba(97, 1, 153, 0.089);
     background-image: url(/Images/pattern.svg);
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-   
-    text-align: center;
-    
 }
-
-.container .tekstit h2 {
+  
+.teksti h2 {
+    margin-top: 7.5vh;
     font-size: 3rem;
-    margin: 0; /* Ensures no interaction with the parent */
-    padding-top: 7.5vh;
 }
 
-
-.container .tekstit h2 span {
+.teksti h2 span {
     color: transparent; 
     background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
     background-size: 200%; 
@@ -247,17 +240,17 @@ section {
     flex-direction: column;
 }
 
-.container .tekstit p {
+    .teksti p {
     font-size: 1.5rem;
 }
 
-.container .tekstit h4 {
+    .teksti h4 {
     font-size: 1.55rem;
     margin-top: 10vh;
     margin-bottom: 2vh;
 }
 
-.container .tekstit h4 span {
+    .teksti h4 span {
     color: transparent; 
     background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
     background-size: 200%; 
@@ -267,7 +260,7 @@ section {
 
  }
 
-.container .tekstit a {
+    .teksti a {
     margin-top: 15vh;
     align-self: left;
     font-size: 1.55rem;
@@ -280,20 +273,20 @@ section {
     transition: .5s;
 }
 
-.container .tekstit a:hover {
+.teksti a:hover {
     color: var(--accent2);
     background: transparent;
 }
 
-  
+
 /* Keyframeja */
 
 @keyframes shine {
     0% {
-      background-position: 200%; /* Start off-screen to the left */
+      background-position: 200%; 
     }
     100% {
-      background-position: -200%; /* End off-screen to the right */
+      background-position: -200%; 
     }
   }
 
@@ -350,6 +343,17 @@ section {
 
     .keski h2 img {
         width: 10%;
+    }
+     .showcase-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 617px){ 
+    .showcase-container {
+        grid-template-columns: 1fr;
     }
 }
 
