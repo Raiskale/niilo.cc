@@ -1,16 +1,20 @@
-// Select all elements with the class 'animate-on-scroll'
+// Select all elements you want to observe
 const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
 // Create an IntersectionObserver instance
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    // Check if the element is in view
     if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');  // Add 'in-view' class to trigger animation
-      observer.unobserve(entry.target);  // Stop observing after animation is triggered
+      // Add a class to trigger animation or make the element visible
+      entry.target.classList.add('in-view');
+      
+      // Optionally stop observing after animation is triggered
+      observer.unobserve(entry.target);
     }
   });
-}, { threshold: 1 }); // Trigger when 50% of the element is in view
+}, {
+  threshold: 0.5, // The element will be considered "in view" when 50% of it is visible
+});
 
 // Observe each element
 elementsToAnimate.forEach(element => {
