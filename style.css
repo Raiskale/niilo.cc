@@ -45,7 +45,7 @@ section {
 .main {
   background: 
     linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
-    url(/Images/pattern.svg);
+    url(/Public/Images/pattern.svg);
   
   background-blend-mode: overlay; /* Ensures both layers are visible */
 }
@@ -135,7 +135,7 @@ section {
 
 
 .secondary {
-    background-image: url(/Images/pattern.svg);
+    background-image: url(Public/Images/pattern.svg);
     position: relative;
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
@@ -223,7 +223,7 @@ section {
     height: 45rem;
     text-align: center;
     background: rgba(97, 1, 153, 0.089);
-    background-image: url(/Images/pattern.svg);
+    background-image: url(Public/Images/pattern.svg);
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
 }
