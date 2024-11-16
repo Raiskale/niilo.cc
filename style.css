@@ -389,16 +389,17 @@ section {
 
     .tieto {
         margin-bottom: 10%;
-        gap: 10vw;
+
+        gap: 2vw;
         
     }
 
     .tieto #commit-count {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .tieto h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
 
