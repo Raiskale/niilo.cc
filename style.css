@@ -193,7 +193,7 @@ section {
     display: grid;
     place-items: center;
     margin-top: 5vh;
-
+    
 
     
 }
@@ -349,6 +349,7 @@ section {
     }
      .showcase-container {
         grid-template-columns: repeat(2, 1fr);
+        margin: 2rem;
     }
 
 }
