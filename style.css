@@ -3,6 +3,7 @@
 
 
 * {
+    
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -135,24 +136,60 @@ section {
 
 
 .tieto {
-
+    gap: 15vw;
     display: flex;
     position: absolute;
     bottom: 0;
     margin-bottom: 5vh;
+    
     width: 100%;
     padding: 5vh;
+    align-items: center; /* This will center items vertically */
+
 }
 
 .tieto #commit-count {
     font-size: 6rem;
+    display: flex; /* Using flex within #commit-count for better control */
+    align-items: center; /* Align all items inside #commit-count vertically */
 }
 
 #commit-count .small-text {
-    font-size: 1.5rem; 
-    vertical-align: middle; 
-    
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-left: 6px;
 }
+
+.tieto h2 {
+    font-size: 6rem;
+    
+    display: flex;
+    align-items: center;
+
+}
+
+.tieto h2 span {
+    margin-left: 6px;
+    font-size: 1.5rem;
+    vertical-align: middle; 
+}
+
+
+/* custom hiiri juttu */
+
+.circle {
+    --cursor-size: 60px;
+    position: fixed;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border: 1px solid #ffffff8f;
+    border-radius: 100%;
+    top: calc(-1 * var(--cursor-size) / 2);
+    left: calc(-1 * var(--cursor-size) / 2);
+    pointer-events: none;
+    z-index: 100;
+  }
+
 
 .secondary {
     background-image: url(Public/Images/pattern.svg);
@@ -346,12 +383,21 @@ section {
         font-size: 40.5%;
     }
 
+    .circle {
+        display: none;
+    }
+
     .tieto {
         margin-bottom: 10%;
+        gap: 10vw;
         
     }
 
     .tieto #commit-count {
+        font-size: 4rem;
+    }
+
+    .tieto h2 {
         font-size: 4rem;
     }
 
