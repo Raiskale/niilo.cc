@@ -134,6 +134,26 @@ section {
 }
 
 
+.tieto {
+
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5vh;
+    width: 100%;
+    padding: 5vh;
+}
+
+.tieto #commit-count {
+    font-size: 6rem;
+}
+
+#commit-count .small-text {
+    font-size: 1.5rem; 
+    vertical-align: middle; 
+    
+}
+
 .secondary {
     background-image: url(Public/Images/pattern.svg);
     position: relative;
@@ -324,6 +344,15 @@ section {
 @media (max-width: 768px) {
     html { 
         font-size: 40.5%;
+    }
+
+    .tieto {
+        margin-bottom: 10%;
+        
+    }
+
+    .tieto #commit-count {
+        font-size: 4rem;
     }
 
 
