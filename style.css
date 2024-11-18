@@ -380,6 +380,9 @@ section {
     html {
         font-size: 47.5%;
     }
+    .circle {
+        --cursor-size: 40px;
+    }
 }
 
 
