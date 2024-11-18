@@ -64,6 +64,8 @@ getCommitCount();
 
 // custom cursor juttu
 const circleElement = document.querySelector('.circle');
+const circle2Element = document.querySelector('.circle2');
+
 
 const mouse = { x: 0, y: 0 },
       circle = { x: 0, y: 0 };
@@ -75,6 +77,7 @@ window.addEventListener('mousemove', e => {
 
 // Speed factor
 const speed = 1;
+const speed2 = .8;
 
 let lastTime = 0;
 const tick = (timestamp) => {
@@ -85,9 +88,12 @@ const tick = (timestamp) => {
   // Smooth transition towards mouse position with deltaTime
   circle.x += (mouse.x - circle.x) * speed * deltaTime;
   circle.y += (mouse.y - circle.y) * speed * deltaTime;
+  
 
   // Update circle element's position
   circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+
+
 
   // Call function on next frame
   window.requestAnimationFrame(tick);
