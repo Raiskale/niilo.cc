@@ -383,6 +383,9 @@ section {
     .circle {
         --cursor-size: 40px;
     }
+    .teksti {
+        height: 37.5vh;
+    }
 }
 
 
