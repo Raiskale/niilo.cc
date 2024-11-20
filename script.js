@@ -1,5 +1,5 @@
 // Select all elements you want to observe
-const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+const elementsToAnimate = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll2');
 
 // Create an IntersectionObserver instance
 const observer = new IntersectionObserver((entries, observer) => {
@@ -21,6 +21,38 @@ elementsToAnimate.forEach(element => {
   observer.observe(element);
 });
 
+
+// Select the elements to animate
+const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+const animateOnScroll2Elements = document.querySelectorAll('.animate-on-scroll2');
+
+// First IntersectionObserver for '.animate-on-scroll' elements
+const observer1 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5 // Trigger when 50% of the element is visible
+});
+
+// Second IntersectionObserver for '.animate-on-scroll2' elements
+const observer2 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.9 // Trigger when 70% of the element is visible (delays animation)
+});
+
+// Observe each set of elements
+animateOnScrollElements.forEach(element => observer1.observe(element));
+animateOnScroll2Elements.forEach(element => observer2.observe(element));
 
 
 // Github commit 
@@ -100,3 +132,5 @@ const tick = (timestamp) => {
 }
 
 window.requestAnimationFrame(tick);
+
+

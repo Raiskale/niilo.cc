@@ -352,6 +352,36 @@ section {
     max-height: 100vh;
 }
 
+.keski2 {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.keski2 h2 {
+    margin-top: 5vh;
+    font-size: 6rem;
+    color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski2 h2 img {
+    width: 4%;
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.keski2 h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    margin-left: 2rem;
+}
 .timeline {
     display: flex;
     align-items: center;
@@ -359,7 +389,7 @@ section {
 }
 
 .timeline .line {
-    margin-top: 15vh;
+    margin-top: 5vh;
     width: 1px;
     height: 80vh;
     border: 2px solid var(--accent2);
@@ -409,6 +439,7 @@ section {
 
 .line .textbox:nth-child(4) { /* Second textbox */
     top: 50%;
+    margin-left: 1vw;
 }
 
 .line .textbox p {
@@ -426,6 +457,8 @@ section {
     animation: shine 20s infinite; 
     margin-left: .5vw;
 }
+
+
 
 
 
@@ -458,8 +491,19 @@ section {
     transition: opacity 1s ease, transform 1s ease;
 }
 
+.animate-on-scroll2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
 /* State when the element is in view */
 .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll2.in-view {
     opacity: 1;
     transform: translateY(0);
 }
@@ -521,6 +565,9 @@ section {
     }
 
     .keski h2 img {
+        width: 10%;
+    }
+    .keski2 h2 img {
         width: 10%;
     }
      .showcase-container {
