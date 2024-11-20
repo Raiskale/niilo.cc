@@ -435,13 +435,23 @@ section {
 }
 
 .line .dot:nth-child(3) {
-    top: 50%; /* Second dot */
+    top: 40%; /* Second dot */
 }
 
 .line .textbox:nth-child(4) { /* Second textbox */
-    top: 45%;
+    top: 36%;
     margin-left: 1vw;
 }
+
+.line .dot:nth-child(5) {
+    top: 62.5%;  
+}
+
+.line .textbox:nth-child(6) { 
+    top: 62.50%;
+    margin-left: 1vw;
+}
+
 
 .line .textbox p {
     color: var(--accent);
@@ -477,11 +487,11 @@ section {
 }
 
 .line .textbox.left::after {
-    top: 70%; /* Vertically centered */
-    right: -10px; /* Position near the right border */
+    top: 70%; 
+    right: -10px; 
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--accent2); /* Match the textbox background */
-    transform: translateY(-50%); /* Adjust alignment */
+    border-color: transparent transparent transparent var(--accent2);
+    transform: translateY(-50%); 
 }
 
 
