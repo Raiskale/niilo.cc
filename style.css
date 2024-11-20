@@ -227,7 +227,7 @@ section {
 
 .keski h2 {
     margin-top: 5vh;
-    font-size: 8rem;
+    font-size: 6rem;
     color: var(--text2);
     display: flex;
     align-items: center; /* Align text and image vertically */
@@ -235,7 +235,7 @@ section {
 }
 
 .keski h2 img {
-    width: 5%;
+    width: 4%;
     margin-left: 10px; 
     vertical-align: middle; 
 }
@@ -345,11 +345,26 @@ section {
 
 
 .about {
-    background-image: url(Public/Images/pattern.svg);
+    
+  
+    background: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
+    url(/Public/Images/pattern.svg);
     position: relative;
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #8400ff31, #000000, #000000);
+    z-index: -1; /* Ensure it is behind the content */
 }
 
 .keski2 {
@@ -395,7 +410,10 @@ section {
     border: 2px solid var(--accent2);
     box-shadow: 0 0 20px 5px var(--accent2);
     position: relative;
+    
 }
+
+
 
 .line .dot {
     width: 25px;
@@ -495,6 +513,175 @@ section {
 }
 
 
+.skill {
+    
+    background: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
+    url(/Public/Images/pattern.svg);
+    background-blend-mode: overlay; /* Ensures both layers are visible */
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure no visual overflow */
+    max-height: 100vh;
+    
+        
+    }
+    
+
+
+
+    .keski3 {
+        text-align: center;
+        justify-content: center;
+        
+    }
+    
+    .keski3 h2 {
+        margin-top: 5vh;
+        font-size: 6rem;
+        color: var(--text2);
+        display: flex;
+        align-items: center; /* Align text and image vertically */
+        justify-content: center;
+    }
+    
+    .keski3 h2 img {
+        width: 4%;
+        margin-left: 10px; 
+        vertical-align: middle; 
+    }
+    
+    .keski3 h2 span {
+        color: transparent; 
+        background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+        background-size: 200%; 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        animation: shine 7s infinite; 
+        margin-left: 2rem;
+    }
+
+
+    .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin-top: 10rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+    
+    .skills-row .skills-column {
+        flex: 1 1 40rem;
+    }
+    
+    .skills-column .title {
+        font-size: 2.5rem;
+        margin: 0 0 1.5rem;
+    
+    }
+    
+    .skills-box .skills-content {
+        position: relative;
+        border: .2rem solid var(--accent);
+        border-radius: .6rem;
+        padding: .5rem 1.5rem;
+        z-index: 1;
+        overflow: hidden;
+    
+    }
+    
+    .skills-box .skills-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--bg);
+        z-index: -1;
+        transition: .5s;
+    }
+    
+    .skills-box .skills-content:hover::before {
+        width: 100%;
+    
+    
+    }
+    
+    
+    .skills-content .progress {
+        padding: 1rem 0;
+    }
+    
+    .skills-content .progress h3 {
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .skills-content .progress h3 span {
+        color: var(--text);
+    }
+    
+    .skills-content .progress .bar {
+        height: 2.5rem;
+        border-radius: .6rem;
+        border: .2rem solid var(--accent);
+        padding: .5rem;
+        margin: 1rem 0;
+    }
+    
+    .skills-content .progress .bar span {
+        display: block;
+        height: 100%;
+        border-radius: .3rem;
+        background: var(--accent);
+    
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+        width: 35%;
+    
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+        width: 55%;
+    
+    }
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+        width: 15%;
+    
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+        width: 30%;
+    
+    }
+    
+    
+    
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+        width: 35%;
+    
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+        width: 15%;
+    
+    }
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+        width: 10%;
+    
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+        width: 5%;
+    
+    }
+    
+
 /* Keyframeja */
 
 @keyframes shine {
@@ -582,6 +769,9 @@ section {
         gap: 2vw;
         
     }
+    .skills-row {
+        margin-top: 2rem;
+    }
 
     .tieto #commit-count {
         font-size: 3rem;
@@ -613,6 +803,9 @@ section {
         width: 10%;
     }
     .keski2 h2 img {
+        width: 10%;
+    }
+    .keski3 h2 img {
         width: 10%;
     }
      .showcase-container {
