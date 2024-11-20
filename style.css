@@ -391,7 +391,7 @@ section {
 .timeline .line {
     margin-top: 5vh;
     width: 1px;
-    height: 80vh;
+    height: 100vh;
     border: 2px solid var(--accent2);
     box-shadow: 0 0 20px 5px var(--accent2);
     position: relative;
