@@ -417,6 +417,7 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px; 
     margin-top: 2.5rem;
+    box-shadow: 0 0 10px 2px var(--accent2);
 }
 
 .line .textbox.left {
@@ -438,7 +439,7 @@ section {
 }
 
 .line .textbox:nth-child(4) { /* Second textbox */
-    top: 50%;
+    top: 45%;
     margin-left: 1vw;
 }
 
@@ -458,8 +459,30 @@ section {
     margin-left: .5vw;
 }
 
+.line .textbox::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
 
+/* Right-side textbox spike */
+.line .textbox:not(.left)::after {
+    top: 80%; /* Vertically centered */
+    left: -10px; /* Position near the left border */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--accent2) transparent transparent; /* Match the textbox background */
+    transform: translateY(-50%); /* Adjust alignment */
+}
 
+.line .textbox.left::after {
+    top: 70%; /* Vertically centered */
+    right: -10px; /* Position near the right border */
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--accent2); /* Match the textbox background */
+    transform: translateY(-50%); /* Adjust alignment */
+}
 
 
 /* Keyframeja */
@@ -518,6 +541,10 @@ section {
     .teksti {
         height: 45.5vh;
     }
+
+    .line .textbox {
+        width: 250px;
+    }
 }
 
 
@@ -525,6 +552,14 @@ section {
 @media (max-width: 768px) {
     html { 
         font-size: 40.5%;
+    }
+
+    .line .textbox {
+        width: 175px;
+    }
+
+    .line .textbox.left {
+        width: 150px;
     }
 
     .circle {
