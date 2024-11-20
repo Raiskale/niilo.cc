@@ -225,7 +225,7 @@ section {
 }
 
 .keski h2 {
-    margin-top: 15vh;
+    margin-top: 5vh;
     font-size: 8rem;
     color: var(--text2);
     display: flex;
@@ -281,7 +281,7 @@ section {
 }
 
 .teksti {
-    height: 45rem;
+    height: 40rem;
     text-align: center;
     background: rgba(97, 1, 153, 0.089);
     background-image: url(Public/Images/pattern.svg);
@@ -343,6 +343,18 @@ section {
 }
 
 
+.about {
+    background-image: url(Public/Images/pattern.svg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure no visual overflow */
+    max-height: 100vh;
+}
+
+
+
+
+
 /* Keyframeja */
 
 @keyframes shine {
@@ -386,7 +398,7 @@ section {
         --cursor-size: 40px;
     }
     .teksti {
-        height: 37.5vh;
+        height: 45.5vh;
     }
 }
 
