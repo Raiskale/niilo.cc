@@ -41,6 +41,7 @@ section {
     --accent: #8400fff8;
     --accent2: #8400ff86;
     --accent3: #8400ff31;
+    --accent4: #8400ff;
 }
 
 .main {
@@ -351,7 +352,80 @@ section {
     max-height: 100vh;
 }
 
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.timeline .line {
+    margin-top: 15vh;
+    width: 1px;
+    height: 80vh;
+    border: 2px solid var(--accent2);
+    box-shadow: 0 0 20px 5px var(--accent2);
+    position: relative;
+}
+
+.line .dot {
+    width: 25px;
+    height: 25px;
+    background-color: var(--accent4); 
+    border-radius: 50%; 
+    border: 2px solid var(--accent4); 
+    position: absolute; 
+    left: 50%; 
+    margin-top: 5rem;
+    transform: translateX(-50%); 
+}
+    
+.line .textbox {
+    position: absolute; 
+    width: 300px; 
+    padding: 10px;
+    border: 1px solid var(--accent2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    margin-top: 2.5rem;
+}
+
+.line .textbox.left {
+    left: auto; 
+    right: calc(50% + 20px); 
+    text-align: right; 
+}
+
+.line .dot:nth-child(1) {
+    top: 10%; /* First dot */
+}
+
+.line .textbox:nth-child(2) { /* First textbox */
+    top: 10%;
+}
+
+.line .dot:nth-child(3) {
+    top: 50%; /* Second dot */
+}
+
+.line .textbox:nth-child(4) { /* Second textbox */
+    top: 50%;
+}
+
+.line .textbox p {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-left: .5vw;
+}
+
+.line .textbox h2 {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 20s infinite; 
+    margin-left: .5vw;
+}
 
 
 
