@@ -771,6 +771,8 @@ section {
     }
     .skills-row {
         margin-top: 2rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .tieto #commit-count {
