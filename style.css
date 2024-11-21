@@ -337,7 +337,7 @@ section {
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
-
+    
     
 }
 
@@ -351,6 +351,7 @@ section {
     background: linear-gradient(to bottom, #8400ff31 30%, #000000, #000000);
     z-index: -1; /* Ensure it is behind the content */
 }
+
 
 
 
