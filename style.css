@@ -337,8 +337,9 @@ section {
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
-    
-    
+    justify-content: center;
+    display: flex;
+    text-align: center;
 }
 
 .third::before {
@@ -350,7 +351,40 @@ section {
     bottom: 0;
     background: linear-gradient(to bottom, #8400ff31 30%, #000000, #000000);
     z-index: -1; /* Ensure it is behind the content */
+    
 }
+
+.keski4 {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.keski4 h2 {
+    margin-top: 5vh;
+    font-size: 6rem;
+    color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski4 h2 img {
+    width: 10%;
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.keski4 h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    margin-left: 2rem;
+}
+
 
 
 
@@ -654,7 +688,7 @@ section {
     .keski2 h2 img {
         width: 10%;
     }
-    .keski3 h2 img {
+    .keski4 h2 img {
         width: 10%;
     }
      .showcase-container {
