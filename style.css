@@ -458,6 +458,7 @@ section {
     box-shadow: 1px 1px 10px rgb(132, 0, 255);
     border-radius: 20;
     font-size: 5rem;
+    border-radius: 20px;
     position: fixed; /* Stay in place */
     z-index: 100; /* Sit on top */
     left: 50%; /* Move the left edge to the center of the screen */
