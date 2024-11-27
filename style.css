@@ -3,7 +3,6 @@
 
 
 * {
-    
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -338,8 +337,6 @@ section {
     z-index: 1;
     overflow: hidden; /* Ensure no visual overflow */
     max-height: 100vh;
-    justify-content: center;
-    display: flex;
     text-align: center;
 
 }
@@ -361,29 +358,20 @@ section {
 .keski4 {
     text-align: center;
     justify-content: center;
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    height: 100%; 
-    position: relative; 
     
 }
-
-
 
 .keski4 h2 {
     margin-top: 5vh;
     font-size: 6rem;
     color: var(--text2);
     display: flex;
-    align-items: center; 
+    align-items: center; /* Align text and image vertically */
     justify-content: center;
-    
 }
 
 .keski4 h2 img {
-    width: 10%;
+    width: 5%;
     margin-left: 10px; 
     vertical-align: middle; 
 }
@@ -398,42 +386,50 @@ section {
     margin-left: 2rem;
 }
 
-.minusta {
-    margin: 0; /* Remove margin to center properly */
-    background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(132, 0, 255, 0.164)),
-    url(/Public/Images/pattern.svg);
-    background-blend-mode: overlay; /* Ensures both layers are visible */
-    border: 2px solid rgba(132, 0, 255, 0.502);
-    box-shadow: 1px 1px 10px rgba(132, 0, 255, 0.589);
-    border-radius: 20px;
-    height: 75vh;
-    width: 80%;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-}
-
-.minusta .tekstit {
-    margin-top: 2rem;
+.tekstit {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
     
 }
 
+.tekstit .aito {
+    display: flex;
+    text-align: center;
+    max-width: 55%;
+    flex-direction: column;
+
+}
+
 .tekstit h2 {
-    color: var(--text);
-    font-size: 2.5rem;
-    margin-top: 0rem;
+    font-size: 3.5rem;
+    color: transparent; 
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.776), rgba(255, 255, 255, 0.598), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    margin-bottom: 5rem;
 }
 
 .tekstit h2 span {
     color: var(--text2);
-    margin-left: .75rem;
-    
 }
 
+.tekstit .aito h2.toka {
+    margin-top: 5rem; 
+    font-size: 3.25rem;
+}
+.tekstit .aito h2 a,
+.tekstit .aito h2.toka span{
+    margin-top: 5rem; 
+    color: #ffffff7d;
+} 
 
-
-
-
+.tekstit .aito p {
+    color: #ffffffba;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
 
 
 
@@ -672,6 +668,10 @@ section {
     .line .textbox {
         width: 250px;
     }
+    
+    .tekstit .aito {
+        max-width: 80%;
+    }
 }
 
 
@@ -707,6 +707,10 @@ section {
 
     .tieto #commit-count {
         font-size: 3rem;
+    }
+
+    .tekstit .aito {
+        max-width: 80%;
     }
 
     .tieto h2 {
