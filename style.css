@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif; /* Use Inter font */
     font-weight: 600;
+    
 }
 
 
@@ -340,6 +341,7 @@ section {
     justify-content: center;
     display: flex;
     text-align: center;
+
 }
 
 .third::before {
@@ -351,22 +353,33 @@ section {
     bottom: 0;
     background: linear-gradient(to bottom, #8400ff31 30%, #000000, #000000);
     z-index: -1; /* Ensure it is behind the content */
+
+
     
 }
 
 .keski4 {
     text-align: center;
     justify-content: center;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%; 
+    position: relative; 
     
 }
+
+
 
 .keski4 h2 {
     margin-top: 5vh;
     font-size: 6rem;
     color: var(--text2);
     display: flex;
-    align-items: center; /* Align text and image vertically */
+    align-items: center; 
     justify-content: center;
+    
 }
 
 .keski4 h2 img {
@@ -384,6 +397,43 @@ section {
     animation: shine 7s infinite; 
     margin-left: 2rem;
 }
+
+.minusta {
+    margin: 0; /* Remove margin to center properly */
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(132, 0, 255, 0.164)),
+    url(/Public/Images/pattern.svg);
+    background-blend-mode: overlay; /* Ensures both layers are visible */
+    border: 2px solid rgba(132, 0, 255, 0.502);
+    box-shadow: 1px 1px 10px rgba(132, 0, 255, 0.589);
+    border-radius: 20px;
+    height: 75vh;
+    width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.minusta .tekstit {
+    outline: 1px solid red;
+    margin-top: 2rem;
+    
+}
+
+.tekstit h2 {
+    color: var(--text);
+    font-size: 2.5rem;
+    margin-top: 0rem;
+}
+
+.tekstit h2 span {
+    color: var(--text2);
+    margin-left: .75rem;
+    
+}
+
+
+
+
 
 
 
