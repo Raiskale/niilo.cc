@@ -134,3 +134,32 @@ const tick = (timestamp) => {
 window.requestAnimationFrame(tick);
 
 
+// Get the button, popup, overlay, and body elements
+const button = document.getElementById("popup-btn");
+const popup = document.querySelector(".popup");
+const overlay = document.querySelector(".overlay");
+const closeButton = document.getElementById("close-popup-btn"); // Get the close button
+
+// Show the popup and overlay when the button is clicked
+button.addEventListener("click", function() {
+    popup.style.display = "block"; // Show the popup
+    overlay.style.display = "block"; // Show the overlay (dark background)
+});
+
+// Close the popup and overlay when clicking outside the popup
+document.addEventListener("click", function(event) {
+    // If the click is outside the popup, close it
+    if (!popup.contains(event.target) && !button.contains(event.target)) {
+        popup.style.display = "none"; // Hide the popup
+        overlay.style.display = "none"; // Hide the overlay
+    }
+});
+
+// Close the popup and overlay when the close button is clicked
+closeButton.addEventListener("click", function() {
+    popup.style.display = "none"; // Hide the popup
+    overlay.style.display = "none"; // Hide the overlay
+});
+
+
+
