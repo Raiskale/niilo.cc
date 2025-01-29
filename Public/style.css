@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    font-weight: 600;
+    
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--text)
+}
+
+body.darkened {
+    background-color: rgb(0, 0, 0); /* Semi-transparent dark background */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+html {
+    font-size: 72.5%;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+
+:root {
+    --bg: #000;
+    --text: #fff;
+    --text2: #b08fcf;
+    --accent: #8400fff8;
+    --accent2: #8400ff86;
+    --accent3: #8400ff31;
+    --accent4: #8400ff;
+}
+
+.main {
+  background: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
+    url(/Public/Images/pattern.svg);
+  
+  background-blend-mode: overlay; /* Ensures both layers are visible */
+}
+
+.text {
+    
+    width: 100%;
+    max-width: 75rem;
+    font-size: 2rem;
+    margin-left: 2vw;
+    position: relative;
+    transform: translateY(22.5vh);
+    height: 45vh;
+    z-index: 1;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.text h1 {
+    font-size: 8.5rem;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+}
+
+.text h1 img {
+    width: 15%;
+    margin-left: 10px; /* Add some space between text and image */
+    vertical-align: middle; /* Ensure the image aligns with the middle of the text */
+}
+
+.text h2 {
+    font-size: 6rem;
+    margin-top: .5vh;
+    margin: 1vw;
+    text-align: left;
+    display: block;
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    
+}
+
+.text h2 span {
+    color: var(--text);
+}
+
+.text h3 {
+    font-size: 2.5rem;
+    margin-left: 1vw;
+}
+
+
+.social-media a{
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--accent2);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--accent2);
+    font-size: 1.75rem;
+    color: var(--main-color);
+    margin: 1vw 0vw 1vw 1vw;
+    
+}
+
+.social-media .contact {
+    border-radius: 10px;
+    width: 11rem;
+    height: 4.5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+
+.social-media a:hover {
+   background: var(--accent2);
+   transition: .5s;
+}
+
+
+.tieto {
+    gap: 15vw;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    
+    
+    width: 100%;
+    padding: 5vh;
+    align-items: center; /* This will center items vertically */
+
+}
+
+.tieto #commit-count {
+    font-size: 6rem;
+    display: flex; /* Using flex within #commit-count for better control */
+    align-items: center; /* Align all items inside #commit-count vertically */
+}
+
+#commit-count .small-text {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.tieto h2 {
+    font-size: 6rem;
+    
+    display: flex;
+    align-items: center;
+
+}
+
+.tieto h2 span {
+    margin-left: 6px;
+    font-size: 1.5rem;
+    vertical-align: middle; 
+}
+
+
+/* custom hiiri juttu */
+
+.circle {
+    --cursor-size: 60px;
+    position: fixed;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border: 1px solid #ffffff8f;
+    border-radius: 100%;
+    top: calc(-1 * var(--cursor-size) / 2);
+    left: calc(-1 * var(--cursor-size) / 2);
+    pointer-events: none;
+    z-index: 100;
+  }
+
+
+
+
+.secondary {
+    background: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
+    url(/Public/Images/pattern.svg);
+  
+  background-blend-mode: overlay; /* Ensures both layers are visible */
+}
+
+
+
+.keski {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.keski h2 {
+    margin-top: 5vh;
+    font-size: 6rem;
+    color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski h2 img {
+    width: 4%;
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.keski h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    margin-left: 2rem;
+}
+
+
+.showcase-container {
+    display: grid;
+    place-items: center;
+    margin-top: 5vh;
+    
+
+    
+}
+
+.showcase-box {
+    display: flex;
+    flex-direction: column; 
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; 
+    max-width: 50rem; 
+    border: 2px solid rgba(132, 0, 255, 0.502);
+    box-shadow: 2px 2px 20px rgb(132, 0, 255);
+    
+    border-radius: 20px;
+}
+
+.showcase-box img {
+    width: 100%; 
+    transition: 0.5s ease;
+    object-fit: cover; 
+    box-shadow: 2px 2px 20px rgb(132, 0, 255);
+}
+
+.teksti {
+    height: 40rem;
+    text-align: center;
+    background: rgba(97, 1, 153, 0.089);
+    background-image: url(Public/Images/pattern.svg);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+}
+  
+.teksti h2 {
+    margin-top: 7.5vh;
+    font-size: 3rem;
+}
+
+.teksti h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    flex-direction: column;
+}
+
+    .teksti p {
+    font-size: 1.5rem;
+}
+
+    .teksti h4 {
+    font-size: 1.55rem;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+    .teksti h4 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite;
+
+ }
+
+    .teksti a {
+    margin-top: 15vh;
+    align-self: left;
+    font-size: 1.55rem;
+    border: var(--accent2) 1px solid;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    color: var(--text);
+    background: var(--accent2);
+    box-shadow: 0 0 10px 2px var(--accent2);
+    transition: .5s;
+}
+
+.teksti a:hover {
+    color: var(--accent2);
+    background: transparent;
+}
+
+
+.third {
+    background-image: url(Public/Images/pattern.svg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure no visual overflow */
+    max-height: 100vh;
+    text-align: center;
+
+}
+
+.third::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #8400ff31 30%, #000000, #000000);
+    z-index: -1; /* Ensure it is behind the content */
+
+
+    
+}
+
+.keski4 {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.keski4 h2 {
+    margin-top: 5vh;
+    font-size: 6rem;
+    color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski4 h2 img {
+    width: 5%;
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.keski4 h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    margin-left: 2rem;
+}
+
+.tekstit {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tekstit .aito {
+    display: flex;
+    text-align: center;
+    max-width: 55%;
+    flex-direction: column;
+
+}
+
+.tekstit h2 {
+    font-size: 3.5rem;
+    color: transparent; 
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.776), rgba(255, 255, 255, 0.598), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    margin-bottom: 5rem;
+}
+
+.tekstit h2 span {
+    color: var(--text2);
+}
+
+.tekstit .aito h2.toka {
+    margin-top: 5rem; 
+    font-size: 3.25rem;
+}
+
+.tekstit .aito h2 a,
+.tekstit .aito h2.toka span{
+    margin-top: 5rem; 
+    color: #ffffff7d;
+} 
+
+.tekstit .aito #popup-btn {
+    background: transparent;
+    border: none;
+    color: #ffffffb5;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    max-width: 10rem;
+    align-self: center;
+}
+
+.tekstit .aito #popup-btn:hover {
+    color: #ffffffe2;
+    transition: .5s;
+}
+
+
+.popup {
+    height: 70vh;
+    width: 30vw;
+    display: none;
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.986), #480487),
+    url(/Public/Images/pattern.svg);
+    border: 2px solid rgba(132, 0, 255, 0.502);
+    box-shadow: 1px 1px 10px rgb(132, 0, 255);
+    border-radius: 20;
+    font-size: 5rem;
+    border-radius: 20px;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 50%; /* Move the left edge to the center of the screen */
+    top: 50%; /* Move the top edge to the center of the screen */
+    transform: translate(-50%, -50%); /* Offset the element by half of its width and height */
+    opacity: 1;
+}
+
+
+#close-popup-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 48px; /* Adjust icon size */
+    color: #fff; /* Match your popup theme */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for close button */
+#close-popup-btn:hover {
+    transform: rotate(50deg);
+    transition: .5s;
+}
+
+
+.about {
+    
+  
+    background: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0), #8400ff31),
+    url(/Public/Images/pattern.svg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure no visual overflow */
+    max-height: 100vh;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #8400ff31, #000000, #000000);
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+.keski2 {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.keski2 h2 {
+    margin-top: 5vh;
+    font-size: 6rem;
+    color: var(--text2);
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    justify-content: center;
+}
+
+.keski2 h2 img {
+    width: 4%;
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.keski2 h2 span {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 7s infinite; 
+    margin-left: 2rem;
+}
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline .line {
+    margin-top: 5vh;
+    width: 1px;
+    height: 100vh;
+    border: 2px solid var(--accent2);
+    box-shadow: 0 0 20px 5px var(--accent2);
+    position: relative;
+    
+}
+
+
+
+.line .dot {
+    width: 25px;
+    height: 25px;
+    background-color: var(--accent4); 
+    border-radius: 50%; 
+    border: 2px solid var(--accent4); 
+    position: absolute; 
+    left: 50%; 
+    margin-top: 5rem;
+    transform: translateX(-50%); 
+}
+    
+.line .textbox {
+    position: absolute; 
+    width: 300px; 
+    padding: 10px;
+    border: 1px solid var(--accent2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    margin-top: 2.5rem;
+    box-shadow: 0 0 10px 2px var(--accent2);
+}
+
+.line .textbox.left {
+    left: auto; 
+    right: calc(50% + 20px); 
+    text-align: right; 
+}
+
+.line .dot:nth-child(1) {
+    top: 10%; /* First dot */
+}
+
+.line .textbox:nth-child(2) { /* First textbox */
+    top: 10%;
+}
+
+.line .dot:nth-child(3) {
+    top: 40%; /* Second dot */
+}
+
+.line .textbox:nth-child(4) { /* Second textbox */
+    top: 36%;
+    margin-left: 1vw;
+}
+
+.line .dot:nth-child(5) {
+    top: 62.5%;  
+}
+
+.line .textbox:nth-child(6) { 
+    top: 62.50%;
+    margin-left: 1vw;
+}
+
+
+.line .textbox p {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-left: .5vw;
+}
+
+.line .textbox h2 {
+    color: transparent; 
+    background: linear-gradient(200deg, rgba(255, 255, 255), rgba(132, 0, 255, 0.502), rgba(255, 255, 255));
+    background-size: 200%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    animation: shine 20s infinite; 
+    margin-left: .5vw;
+}
+
+.line .textbox::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Right-side textbox spike */
+.line .textbox:not(.left)::after {
+    top: 80%; /* Vertically centered */
+    left: -10px; /* Position near the left border */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--accent2) transparent transparent; /* Match the textbox background */
+    transform: translateY(-50%); /* Adjust alignment */
+}
+
+.line .textbox.left::after {
+    top: 70%; 
+    right: -10px; 
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--accent2);
+    transform: translateY(-50%); 
+}
+
+
+
+
+
+    
+
+/* Keyframeja */
+
+@keyframes shine {
+    0% {
+      background-position: 200%; 
+    }
+    100% {
+      background-position: -200%; 
+    }
+  }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: .5;
+
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-on-scroll2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+/* State when the element is in view */
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll2.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 47.5%;
+    }
+    .circle {
+        --cursor-size: 40px;
+    }
+    .teksti {
+        height: 45.5vh;
+    }
+
+    .line .textbox {
+        width: 250px;
+    }
+    
+    .tekstit .aito {
+        max-width: 80%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    html { 
+        font-size: 40.5%;
+    }
+
+    .line .textbox {
+        width: 175px;
+    }
+
+    .line .textbox.left {
+        width: 150px;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .tieto {
+        margin-bottom: 10%;
+
+        gap: 2vw;
+        
+    }
+    .skills-row {
+        margin-top: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .tieto #commit-count {
+        font-size: 3rem;
+    }
+
+    .tekstit .aito {
+        max-width: 80%;
+    }
+
+    .tieto h2 {
+        font-size: 3rem;
+    }
+
+
+    .text {
+        margin-left: 5vw;
+    }
+    .text h3 {
+        font-size: 3.5rem;
+    }
+    .social-media a {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2.5rem;
+    }
+    .social-media .contact {
+      width: 12rem;
+      height: 5rem;
+      font-size: 2rem;
+    }
+
+    .keski h2 img {
+        width: 10%;
+    }
+    .keski2 h2 img {
+        width: 10%;
+    }
+    .keski4 h2 img {
+        width: 10%;
+    }
+     .showcase-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem;
+    }
+
+}
+
+
+@media (max-width: 617px){ 
+    .showcase-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
