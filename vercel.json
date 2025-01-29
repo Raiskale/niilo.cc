@@ -1,7 +1,7 @@
 {
     "routes": [
       {
-        "src": "/Public",
+        "src": "/",
         "dest": "/api/redirect"
       }
     ]
